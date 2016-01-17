@@ -1,0 +1,5 @@
+---
+# tasks file for ansible-virtualbox
+
+- include: "{{ ansible_distribution }}-repo.yml"
+- include: "{{ ansible_distribution }}-packages.yml"

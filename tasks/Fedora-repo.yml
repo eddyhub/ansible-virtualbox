@@ -1,0 +1,10 @@
+---
+# add repos for virtualbox
+
+- name: "virtualbox | add Fedora {{ ansible_distribution_version }} - {{ ansible_architecture }} - VirtualBox repository"
+  yumrepo:
+    name="virtualbox"
+    description="Fedora {{ ansible_distribution_version }} - {{ ansible_architecture }} - VirtualBox"
+    baseurl="http://download.virtualbox.org/virtualbox/rpm/fedora/{{ ansible_distribution_version }}/{{ ansible_architecture }}"
+    gpgkey="https://www.virtualbox.org/download/oracle_vbox.asc"
+    gpgcheck="yes"

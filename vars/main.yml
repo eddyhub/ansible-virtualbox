@@ -1,0 +1,13 @@
+---
+# vars file for ansible-virtualbox
+fedora_packages:
+  - binutils
+  - gcc
+  - make
+  - patch
+  - libgomp
+  - glibc-headers
+  - glibc-devel
+  - kernel-headers
+  - kernel-devel
+  - dkms

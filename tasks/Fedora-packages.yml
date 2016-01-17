@@ -1,0 +1,17 @@
+---
+# tasks file for fedora
+
+- name: Install necessary packages
+  package:
+    name={{ item }}
+    state=latest
+  with_items: "{{ fedora_packages }}"
+  notify:
+    - Rebuild kernel modules
+
+- name: Install VirtualBox-{{ virtualbox_version }}
+  package:
+    name=VirtualBox-{{ virtualbox_version }}
+    state=latest
+  notify:
+    - Rebuild kernel modules

@@ -1,0 +1,4 @@
+---
+# defaults file for ansible-virtualbox
+
+virtualbox_version: 5.0
